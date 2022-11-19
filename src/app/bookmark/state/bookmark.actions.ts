@@ -4,8 +4,8 @@ import { Bookmark, Bookmarks } from './bookmark.state';
 export enum EBookmarkActions {
     GET_BOOKMARKS = '[Bookmark] Get Bookmarks',
     CREATE_BOOKMARK= '[Bookmark] Create Bookmark',
-    EDIT_BOOKMARK= '[Bookmark] Edit Bookmark',
-    DELETE_BOOKMARK = '[Bookmark] Delete Bookmark',
+    // EDIT_BOOKMARK= '[Bookmark] Edit Bookmark',
+    // DELETE_BOOKMARK = '[Bookmark] Delete Bookmark',
     LOAD_BOOKMARK_INIT = '[Bookmark] Load Bookmark init',
     LOAD_BOOKMARK_DONE = '[Bookmark] Load Bookmark done',
     RESTORE_BOOKMARKS = '[Bookmark] Restore Bookmarks to current state'
@@ -27,21 +27,21 @@ export class CreateBookmark implements Action {
     }
 }
 
-export class EditBookmark implements Action {
-  readonly type = EBookmarkActions.EDIT_BOOKMARK;
+// export class EditBookmark implements Action {
+//   readonly type = EBookmarkActions.EDIT_BOOKMARK;
 
-  constructor(public payload: Bookmark) {
-      console.log('ACTION ' + EBookmarkActions.EDIT_BOOKMARK);
-  }
-}
+//   constructor(public payload: Bookmark) {
+//       console.log('ACTION ' + EBookmarkActions.EDIT_BOOKMARK);
+//   }
+// }
 
-export class DeleteBookmark implements Action {
-    readonly type = EBookmarkActions.DELETE_BOOKMARK;
+// export class DeleteBookmark implements Action {
+//     readonly type = EBookmarkActions.DELETE_BOOKMARK;
 
-    constructor(public payload: Bookmark) {
-        console.log('ACTION ' + EBookmarkActions.DELETE_BOOKMARK);
-    }
-}
+//     constructor(public payload: Bookmark) {
+//         console.log('ACTION ' + EBookmarkActions.DELETE_BOOKMARK);
+//     }
+// }
 
 export class LoadBookmarkInit implements Action {
     readonly type = EBookmarkActions.LOAD_BOOKMARK_INIT;
@@ -67,5 +67,5 @@ export class RestoreBookmarks implements Action {
   }
 }
 
-export type BookmarkActions = GetBookmarks | CreateBookmark | DeleteBookmark |
- LoadBookmarkInit | LoadBookmarkDone | EditBookmark | RestoreBookmarks;
+export type BookmarkActions = GetBookmarks | CreateBookmark  |
+ LoadBookmarkInit | LoadBookmarkDone | RestoreBookmarks;

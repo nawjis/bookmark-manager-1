@@ -1,5 +1,5 @@
 <hr>
-<img class="desktop-logo" src="https://www.avaloq.com/o/avaloq-theme/images/avaloq_logo_claim.svg" alt="Avaloq Logo Claim">
+Bookmark Manager
 <hr>
 <mat-toolbar color="primary">
   <mat-icon aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
@@ -54,12 +54,12 @@
           <ng-container matColumnDef="Actions">
               <th mat-header-cell *matHeaderCellDef></th>
               <td mat-cell *matCellDef="let bookmark">
-                <button *ngIf="isEditMode" mat-icon-button color="primary" aria-label="edit icon" (click)="openDialog(true, bookmark)">
+                <!-- <button *ngIf="isEditMode" mat-icon-button color="primary" aria-label="edit icon" (click)="openDialog(true, bookmark)">
                     <mat-icon matTooltip="Edit Bookmark">edit</mat-icon>
-                </button>
-                <button *ngIf="isEditMode" mat-icon-button color="warn" aria-label="delete icon" (click)="deleteBookmark(bookmark)">
+                </button> -->
+                <!-- <button *ngIf="isEditMode" mat-icon-button color="warn" aria-label="delete icon" (click)="deleteBookmark(bookmark)">
                     <mat-icon matTooltip="Delete Bookmark">delete</mat-icon>
-                </button>
+                </button> -->
               </td>
           </ng-container>
 

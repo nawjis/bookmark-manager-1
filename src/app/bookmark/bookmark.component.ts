@@ -2,7 +2,7 @@ import {Component, OnInit, Inject, Input, OnDestroy} from '@angular/core';
 import {Observable, Subscription} from 'rxjs';
 import { Store, select } from '@ngrx/store';
 import { AppState, selectBookmarks, selectBookmarksGroups, selectBookmarksByGroup } from '../app.state';
-import { Bookmark, DeleteBookmark, CreateBookmark, LoadBookmarkInit, EditBookmark, RestoreBookmarks } from './state';
+import { Bookmark, CreateBookmark, LoadBookmarkInit, RestoreBookmarks } from './state';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -64,16 +64,7 @@ export class BookmarkComponent implements OnInit, OnDestroy {
     this.showNotification();
   }
 
-  editBookmark(bookmark: Bookmark) {
-    this.store.dispatch(new EditBookmark(bookmark));
-    this.showNotification();
-  }
 
-
-  deleteBookmark(bookmark: Bookmark) {
-    this.store.dispatch(new DeleteBookmark(bookmark));
-    this.showNotification();
-  }
 
   loadBookmarks() {
     this.store.dispatch(new LoadBookmarkInit(null));
@@ -100,7 +91,7 @@ export class BookmarkComponent implements OnInit, OnDestroy {
       dialogRef.afterClosed().subscribe(data => {
         if (data) {
           if (editMode) {
-            this.editBookmark(data);
+            // this.editBookmark(data);
           } else {
             this.createBookmark(data);
           }

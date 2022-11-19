@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "bookmark-manager"
+  "defaultProject": "bookmark-manager",
+  "cli": {
+    "analytics": "be0cb47b-ca8b-4d38-bbad-74759904963d"
+  }
 }
